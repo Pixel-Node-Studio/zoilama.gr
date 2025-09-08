@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoi Lama | Legal Expertise in Crete</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8B0000',
+                        secondary: '#D4AF37',
+                        dark: '#2C2C2C',
+                        light: '#F8F8F8'
+                    },
+                    fontFamily: {
+                        heading: ['Playfair Display', 'serif'],
+                        body: ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3') no-repeat center center;
+            background-size: cover;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 8px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #D4AF37;
+            z-index: 1;
+        }
+        .timeline-line {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #D4AF37;
+        }
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: scale(1.02);
+        }
+        .lang-switcher {
+            transition: all 0.3s ease;
+        }
+        .lang-switcher:hover {
+            color: #D4AF37;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #D4AF37;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .active::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="font-body bg-light text-dark">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-balance-scale text-primary text-2xl mr-2"></i>
+                        <span class="text-xl font-heading font-bold text-primary">Zoi Lama</span>
+                    </div>
+                </div>
+                
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="nav-link active text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium">Home</a>
+                        <a href="#about" class="nav-link text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium">About</a>
+                        <a href="#services" class="nav-link text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium">Services</a>
+                        <a href="#experience" class="nav-link text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium">Experience</a>
+                        <a href="#fees" class="nav-link text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium">Legal Fees</a>
+                        <a href="#testimonials" class="nav-link text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium">Testimonials</a>
+                        <a href="#contact" class="nav-link text-gray-700 hover:text-primary px-3 py-2 text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                
+                <div class="flex items-center">
+                    <div class="flex space-x-2">
+                        <button id="en-btn" class="lang-switcher px-3 py-1 text-sm font-medium rounded-md bg-secondary text-white">EN</button>
+                        <button id="el-btn" class="lang-switcher px-3 py-1 text-sm font-medium rounded-md text-gray-700 hover:bg-gray-100">ΕΛ</button>
+                    </div>
+                    
+                    <div class="md:hidden ml-4">
+                        <button id="mobile-menu-button" class="text-gray-700 hover:text-primary focus:outline-none">
+                            <i class="fas fa-bars text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
+            <div class="flex flex-col space-y-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">Home</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">About</a>
+                <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">Services</a>
+                <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">Experience</a>
+                <a href="#fees" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">Legal Fees</a>
+                <a href="#testimonials" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">Testimonials</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg pt-24 pb-20 md:pb-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="text-white">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">Legal Expertise in Crete</h1>
+                    <p class="text-xl md:text-2xl mb-8 leading-relaxed">Over 20 Years of Professional Experience Serving Clients Worldwide</p>
+                    <a href="#contact" class="inline-block bg-secondary hover:bg-opacity-90 text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300 transform hover:scale-105">
+                        Contact Now
+                    </a>
+                </div>
+                <div class="flex justify-center">
+                    <div class="relative">
+                        <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-secondary">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Zoi Lama" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 bg-primary text-white py-2 px-6 rounded-lg shadow-lg">
+                            <span class="font-bold">Zoi Lama</span>
+                            <p>Attorney at Law</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Biography Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Professional Biography</h2>
+                <div class="w-20 h-1 bg-secondary mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold text-dark mb-4">Academic Background</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-graduation-cap text-secondary mt-1 mr-3"></i>
+                                <span>Licentiate in Law, University of Athens, Greece</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-graduation-cap text-secondary mt-1 mr-3"></i>
+                                <span>Master's Degree in European Law, Paris I Panthéon-Sorbonne University, France</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-graduation-cap text-secondary mt-1 mr-3"></i>
+                                <span>Bar Admission, Athens Bar Association</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-2xl font-bold text-dark mb-4">Professional Career</h3>
+                        <div class="relative pl-8 border-l-2 border-secondary">
+                            <div class="timeline-line"></div>
+                            
+                            <div class="relative pl-8 pb-8 timeline-item">
+                                <div class="absolute -left-12 top-0 bg-secondary text-white rounded-full w-10 h-10 flex items-center justify-center">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                                <h4 class="text-xl font-bold text-dark">Senior Partner</h4>
+                                <p class="text-secondary font-medium">Lama & Associates Law Firm</p>
+                                <p class="text-gray-600">2010 - Present</p>
+                                <p class="mt-2">Leading legal practice specializing in real estate, corporate law, and international investments.</p>
+                            </div>
+                            
+                            <div class="relative pl-8 pb-8 timeline-item">
+                                <div class="absolute -left-12 top-0 bg-secondary text-white rounded-full w-10 h-10 flex items-center justify-center">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                                <h4 class="text-xl font-bold text-dark">Associate Attorney</h4>
+                                <p class="text-secondary font-medium">Papadopoulos & Partners</p>
+                                <p class="text-gray-600">2005 - 2010</p>
+                                <p class="mt-2">Specialized in family law, property transactions, and contract negotiations.</p>
+                            </div>
+                            
+                            <div class="relative pl-8 timeline-item">
+                                <div class="absolute -left-12 top-0 bg-secondary text-white rounded-full w-10 h-10 flex items-center justify-center">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                                <h4 class="text-xl font-bold text-dark">Legal Consultant</h4>
+                                <p class="text-secondary font-medium">European Investment Group</p>
+                                <p class="text-gray-600">2000 - 2005</p>
+                                <p class="mt-2">Provided legal counsel for international investors entering the Greek market.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex justify-center">
+                    <div class="rounded-xl overflow-hidden shadow-xl max-w-md">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Zoi Lama" class="w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Legal Services</h2>
+                <div class="w-20 h-1 bg-secondary mx-auto"></div>
+                <p class="mt-6 text-xl max-w-3xl mx-auto text-gray-600">Comprehensive legal solutions tailored to your specific needs</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-16 h-16 rounded-full bg-secondary flex items-center justify-center mb-6">
+                        <i class="fas fa-home text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">Real Estate Law</h3>
+                    <p class="text-gray-600 mb-4">Expert guidance for property purchases, sales, and disputes in Crete and throughout Greece.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                            <span>Property acquisition and due diligence</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                            <span>Title searches and legal documentation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                            <span>Boundary and ownership disputes</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-16 h-16 rounded-full bg-secondary flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">Investment Law</h3>
+                    <p class="text-gray-600 mb-4">Specialized legal support for domestic and international investors in Greece.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                            <span>Golden Visa program applications</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                            <span>Corporate structure setup</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                            <span>Regulatory compliance assistance</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-16 h-16 rounded-full bg-secondary flex items-center justify-center mb-6">
+                        <i class="fas fa-users text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">Family Law</h3>
+                    <p class="text-gray-600 mb-4">Compassionate representation for family-related legal matters and disputes.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                            <span>Divorce proceedings and settlements</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                            <span>Child custody arrangements</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                            <span>Inheritance and succession planning</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-16 h-16 rounded-full bg-secondary flex items-center justify-center mb-6">
+                        <i class="fas fa-building text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">Corporate Law</h3>
+                    <p class="text-gray-600 mb-4">Strategic legal advice for businesses at every stage of development.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                            <span>Company formation and registration</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                            <span>Contract drafting and review</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                            <span>Mergers and acquisitions support</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-16 h-16 rounded-full bg-secondary flex items-center justify-center mb-6">
+                        <i class="fas fa-passport text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">Immigration Law</h3>
+                    <p class="text-gray-600 mb-4">Guidance through Greece's immigration processes for individuals and families.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                            <span>Residence permit applications</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                            <span>Citizenship procedures</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                            <span>Visa category assistance</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-16 h-16 rounded-full bg-secondary flex items-center justify-center mb-6">
+                        <i class="fas fa-file-contract text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">Contract Law</h3>
+                    <p class="text-gray-600 mb-4">Drafting, review, and negotiation of all types of legal agreements.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                            <span>Commercial contracts</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                            <span>Employment agreements</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                            <span>Lease and rental agreements</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Testimonials Section -->
+    <section id="experience" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Experience & Recognition</h2>
+                <div class="w-20 h-1 bg-secondary mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold text-dark mb-6">Professional Highlights</h3>
+                    <div class="space-y-6">
+                        <div class="flex">
+                            <div class="mr-4">
+                                <div class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center">
+                                    <i class="fas fa-trophy text-white"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-dark">Top Legal Practitioner Award</h4>
+                                <p class="text-gray-600">Hellenic Bar Association, 2018</p>
+                                <p class="mt-2">Recognized for exceptional contributions to legal practice in Crete.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="mr-4">
+                                <div class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center">
+                                    <i class="fas fa-globe-europe text-white"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-dark">International Legal Consultant</h4>
+                                <p class="text-gray-600">European Union Chamber of Commerce, 2015-Present</p>
+                                <p class="mt-2">Advising multinational corporations on Greek legal compliance.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="mr-4">
+                                <div class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center">
+                                    <i class="fas fa-book text-white"></i>
+                            </div>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-dark">Published Legal Scholar</h4>
+                                <p class="text-gray-600">Journal of Mediterranean Legal Studies</p>
+                                <p class="mt-2">Author of numerous articles on property law and investment regulations.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10">
+                        <h3 class="text-2xl font-bold text-dark mb-6">Client Testimonials</h3>
+                        <div id="testimonials-container" class="space-y-6">
+                            <!-- Testimonial 1 -->
+                            <div class="testimonial-card bg-light p-6 rounded-lg border border-gray-200">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" class="w-full h-full object-cover">
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-dark">Michael Thompson</h4>
+                                        <p class="text-gray-600">Property Investor, UK</p>
+                                    </div>
+                                </div>
+                                <p class="text-gray-700 italic">"Ms. Lama guided me through the complex process of purchasing property in Crete. Her expertise and attention to detail saved me significant time and potential legal issues. Highly recommended!"</p>
+                            </div>
+                            
+                            <!-- Testimonial 2 -->
+                            <div class="testimonial-card bg-light p-6 rounded-lg border border-gray-200">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client" class="w-full h-full object-cover">
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-dark">Sophia Martinez</h4>
+                                        <p class="text-gray-600">Entrepreneur, Spain</p>
+                                    </div>
+                                </div>
+                                <p class="text-gray-700 italic">"As a foreign investor, navigating Greek business law was challenging. Zoi provided clear, practical advice that helped establish my company successfully. Her knowledge of both local and EU regulations is impressive."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="bg-primary text-white p-8 rounded-xl">
+                        <h3 class="text-2xl font-bold mb-6">Why Choose My Practice?</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mt-1 mr-3"></i>
+                                <span>Over 20 years of specialized legal practice in Crete</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mt-1 mr-3"></i>
+                                <span>Bilingual communication (English and Greek)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mt-1 mr-3"></i>
+                                <span>Personalized approach to each client's unique situation</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mt-1 mr-3"></i>
+                                <span>Transparent pricing with detailed fee structures</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mt-1 mr-3"></i>
+                                <span>Proven track record with international clients</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-secondary mt-1 mr-3"></i>
+                                <span>Strong network of professionals in related fields</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="mt-8 p-6 bg-black bg-opacity-20 rounded-lg">
+                            <h4 class="text-xl font-bold mb-3">Areas of Practice</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm">Real Estate</span>
+                                <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm">Corporate Law</span>
+                                <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm">Immigration</span>
+                                <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm">Family Law</span>
+                                <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm">Investments</span>
+                                <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm">Contracts</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legal Fees Section -->
+    <section id="fees" class="py-20 bg-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Legal Fee Structure</h2>
+                <div class="w-20 h-1 bg-secondary mx-auto"></div>
+                <p class="mt-6 text-xl max-w-3xl mx-auto text-gray-600">Transparent and competitive pricing for all legal services</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md text-center">
+                    <div class="w-20 h-20 rounded-full bg-secondary flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-search-dollar text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">Initial Consultation</h3>
+                    <p class="text-3xl font-bold text-primary mb-4">€100/hour</p>
+                    <p class="text-gray-600 mb-6">First meeting to discuss your case and legal options</p>
+                    <ul class="text-left text-gray-600 space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>No obligation assessment</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Written summary of findings</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Clear next steps recommendation</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-md text-center border-2 border-secondary">
+                    <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-file-invoice-dollar text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">Hourly Rates</h3>
+                    <p class="text-3xl font-bold text-primary mb-4">€200/hour</p>
+                    <p class="text-gray-600 mb-6">Standard rate for ongoing legal work</p>
+                    <ul class="text-left text-gray-600 space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Detailed monthly billing statements</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Regular progress updates</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Flexible payment plans available</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-md text-center">
+                    <div class="w-20 h-20 rounded-full bg-secondary flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-hand-holding-usd text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">Fixed Fee Packages</h3>
+                    <p class="text-3xl font-bold text-primary mb-4">Custom Pricing</p>
+                    <p class="text-gray-600 mb-6">Pre-determined fees for specific services</p>
+                    <ul class="text-left text-gray-600 space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Property purchase packages</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Business incorporation packages</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-secondary mt-1 mr-2"></i>
+                            <span>Immigration application packages</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-16 bg-white p-8 rounded-xl shadow-md max-w-4xl mx-auto">
+                <h3 class="text-2xl font-bold text-dark mb-6 text-center">Our Commitment to Transparency</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-xl font-bold text-primary mb-4">What We Guarantee</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-shield-alt text-secondary mt-1 mr-3"></i>
+                                <span>Clear upfront cost estimates before proceeding</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-shield-alt text-secondary mt-1 mr-3"></i>
+                                <span>No hidden fees or unexpected charges</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-shield-alt text-secondary mt-1 mr-3"></i>
+                                <span>Regular billing updates during long-term cases</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-shield-alt text-secondary mt-1 mr-3"></i>
+                                <span>Explanation of all costs in plain language</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-primary mb-4">Payment Options</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-credit-card text-secondary mt-1 mr-3"></i>
+                                <span>All major credit cards accepted</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-credit-card text-secondary mt-1 mr-3"></i>
+                                <span>Bank transfers for international clients</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-credit-card text-secondary mt-1 mr-3"></i>
+                                <span>Installment payment plans available</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-credit-card text-secondary mt-1 mr-3"></i>
+                                <span>VAT invoices for business clients</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Contact Me</h2>
+                <div class="w-20 h-1 bg-secondary mx-auto"></div>
+                <p class="mt-6 text-xl max-w-3xl mx-auto text-gray-600">Reach out for a confidential consultation regarding your legal needs</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <form class="bg-light p-8 rounded-xl shadow-md">
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Full Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent" placeholder="Your name">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent" placeholder="your.email@example.com">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent" placeholder="+30 2810 000000">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="service" class="block text-gray-700 font-medium mb-2">Service Interest</label>
+                            <select id="service" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent">
+                                <option>Select a service</option>
+                                <option>Real Estate Law</option>
+                                <option>Investment Law</option>
+                                <option>Family Law</option>
+                                <option>Corporate Law</option>
+                                <option>Immigration Law</option>
+                                <option>Contract Law</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent" placeholder="How can I help you?"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-primary hover:bg-opacity-90 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <div>
+                    <div class="bg-light p-8 rounded-xl shadow-md h-full">
+                        <h3 class="text-2xl font-bold text-dark mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6 mb-8">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center mr-4">
+                                    <i class="fas fa-map-marker-alt text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-dark">Office Location</h4>
+                                    <p class="text-gray-600">15 Eleftheriou Venizelou Street<br>Heraklion, Crete 71202<br>Greece</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center mr-4">
+                                    <i class="fas fa-phone-alt text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-dark">Phone</h4>
+                                    <p class="text-gray-600"><a href="tel:+302810123456" class="hover:text-primary">+30 2810 123456</a></p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center mr-4">
+                                    <i class="fas fa-envelope text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-dark">Email</h4>
+                                    <p class="text-gray-600"><a href="mailto:info@zoilama.gr" class="hover:text-primary">info@zoilama.gr</a></p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center mr-4">
+                                    <i class="fas fa-clock text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-dark">Office Hours</h4>
+                                    <p class="text-gray-600">Monday-Friday: 9:00 AM - 6:00 PM<br>Saturday: By appointment only</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25475.21249888133!2d25.1255745!3d35.3387392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x149a59a9b7dc59d5%3A0xc2d8c7c1e0a0a00!2sHeraklion%2C%20Greece!5e0!3m2!1sen!2sus!4v1650000000000!5m2!1sen!2sus" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <i class="fas fa-balance-scale text-secondary text-2xl mr-2"></i>
+                        <span class="text-2xl font-heading font-bold">Zoi Lama</span>
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-md">Providing expert legal services in Crete with over two decades of experience serving international and domestic clients.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-secondary transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-secondary transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-secondary transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-300 hover:text-secondary transition duration-300">Home</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-secondary transition duration-300">About</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-secondary transition duration-300">Services</a></li>
+                        <li><a href="#experience" class="text-gray-300 hover:text-secondary transition duration-300">Experience</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-secondary transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Practice Areas</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-300 hover:text-secondary transition duration-300">Real Estate Law</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-secondary transition duration-300">Investment Law</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-secondary transition duration-300">Family Law</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-secondary transition duration-300">Corporate Law</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-secondary transition duration-300">Immigration Law</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-800 text-center text-gray-400">
+                <p>&copy; 2023 Zoi Lama Law Office. All rights reserved.</p>
+                <p class="mt-2">Designed with integrity and professionalism for the modern legal practice.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        // Language switcher
+        document.getElementById('en-btn').addEventListener('click', function() {
+            this.classList.add('bg-secondary', 'text-white');
+            document.getElementById('el-btn').classList.remove('bg-secondary', 'text-white');
+            document.getElementById('el-btn').classList.add('text-gray-700');
+        });
+        
+        document.getElementById('el-btn').addEventListener('click', function() {
+            this.classList.add('bg-secondary', 'text-white');
+            document.getElementById('en-btn').classList.remove('bg-secondary', 'text-white');
+            document.getElementById('en-btn').classList.add('text-gray-700');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+        
+        // Update active nav link on scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
