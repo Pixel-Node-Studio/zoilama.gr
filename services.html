@@ -84,65 +84,179 @@
   </header>
 
 
-<!-- Services Section -->
-<section class="py-20 bg-secondary">
-    <div class="container mx-auto px-4">
-      <h2 class="text-5xl font-bold text-center mb-12 text-primary">Legal Services</h2> <br>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-        <!-- Service Cards -->
-        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300">
-          <div class="text-primary mb-4"><i data-feather="home" class="w-12 h-12"></i></div>
-          <h3 class="text-xl font-bold mb-3">Property Law</h3>
-          <p class="text-gray-600">Complete support for property purchases, sales, rentals, and dispute resolution in Greece.</p>
-        </div>
-        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300">
-          <div class="text-primary mb-4"><i data-feather="users" class="w-12 h-12"></i></div>
-          <h3 class="text-xl font-bold mb-3">Family Law</h3>
-          <p class="text-gray-600">Guidance in divorce, child custody, alimony, and other family-related legal cases.</p>
-        </div>
-        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300">
-          <div class="text-primary mb-4"><i data-feather="book" class="w-12 h-12"></i></div>
-          <h3 class="text-xl font-bold mb-3">Inheritance Law</h3>
-          <p class="text-gray-600">Assistance with wills, succession, estate planning, and Greek inheritance procedures.</p>
-        </div>
-        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300">
-          <div class="text-primary mb-4"><i data-feather="globe" class="w-12 h-12"></i></div>
-          <h3 class="text-xl font-bold mb-3">Foreign Investors</h3>
-          <p class="text-gray-600">Specialized services for international clients buying property or investing in Crete.</p>
-        </div>
-      </div>
-
-     <!-- Detailed Descriptions with Image Left -->
-<section class="py-20 bg-secondary">
-    <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-      
-      <!-- Image Left -->
-      <div>
-        <img src="images/law6.jpg" alt="Legal Services" class="rounded-2xl shadow-lg">
-      </div>
+<!-- Hero Image for Services -->
+<section class="relative w-full h-[60vh] md:h-[80vh]">
+    <img src="images/law6.jpg" alt="Legal Services" class="w-full h-full object-contain">
+  </section>
   
-      <!-- Text Right -->
-      <div class="space-y-12">
-        <div>
-          <h3 class="text-2xl font-bold text-primary mb-4">Property Law</h3>
-          <p class="text-gray-700 leading-relaxed">Over 500 successful property transactions in Crete and across Greece. Expertise in registration processes, title deeds, and resolution of disputes involving local and international clients.</p>
+  <!-- Services Section -->
+  <section class="py-20 bg-secondary">
+    <div class="container mx-auto px-4">
+  
+      <!-- Service Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Real Estate Law -->
+        <div onclick="toggleCard(this)" class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition cursor-pointer">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+              <i data-feather="home" class="w-10 h-10 text-primary"></i>
+              <h3 class="text-xl font-bold text-primary">Real Estate Law</h3>
+            </div>
+            <span class="text-primary text-2xl">+</span>
+          </div>
+          <p class="text-gray-600 mt-4 hidden transition-all duration-300">
+            Over 500 successful property transactions. Full expertise in registration, title deeds & dispute resolution.
+          </p>
         </div>
-        <div>
-          <h3 class="text-2xl font-bold text-primary mb-4">Family Law</h3>
-          <p class="text-gray-700 leading-relaxed">Comprehensive support in family-related matters including divorce, custody, adoption, and alimony. Dedicated to finding practical and fair solutions.</p>
+  
+        <!-- Lease Contracts -->
+        <div onclick="toggleCard(this)" class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition cursor-pointer">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+              <i data-feather="file-text" class="w-10 h-10 text-primary"></i>
+              <h3 class="text-xl font-bold text-primary">Lease Contract Law</h3>
+            </div>
+            <span class="text-primary text-2xl">+</span>
+          </div>
+          <p class="text-gray-600 mt-4 hidden transition-all duration-300">
+            Drafting, reviewing & litigating lease agreements, arrears & evictions with strong landlord/tenant support.
+          </p>
         </div>
-        <div>
-          <h3 class="text-2xl font-bold text-primary mb-4">Inheritance Law</h3>
-          <p class="text-gray-700 leading-relaxed">Trusted assistance with wills, probate, and Greek inheritance tax regulations. Helping international families manage estates smoothly.</p>
+  
+        <!-- Family Law -->
+        <div onclick="toggleCard(this)" class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition cursor-pointer">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+              <i data-feather="users" class="w-10 h-10 text-primary"></i>
+              <h3 class="text-xl font-bold text-primary">Family Law</h3>
+            </div>
+            <span class="text-primary text-2xl">+</span>
+          </div>
+          <p class="text-gray-600 mt-4 hidden transition-all duration-300">
+            Support for divorce, custody, adoption & spousal disputes. Focused on practical and fair solutions.
+          </p>
         </div>
-        <div>
-          <h3 class="text-2xl font-bold text-primary mb-4">Foreign Investors</h3>
-          <p class="text-gray-700 leading-relaxed">Specialized legal services for international clients looking to invest in Greece. Guidance from due diligence to property acquisition and residency applications.</p>
+  
+        <!-- Inheritance Law -->
+        <div onclick="toggleCard(this)" class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition cursor-pointer">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+              <i data-feather="book" class="w-10 h-10 text-primary"></i>
+              <h3 class="text-xl font-bold text-primary">Inheritance Law</h3>
+            </div>
+            <span class="text-primary text-2xl">+</span>
+          </div>
+          <p class="text-gray-600 mt-4 hidden transition-all duration-300">
+            Wills, probate, succession and tax compliance. Smooth guidance for international families.
+          </p>
         </div>
+  
+        <!-- Business & Commercial -->
+        <div onclick="toggleCard(this)" class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition cursor-pointer">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+              <i data-feather="briefcase" class="w-10 h-10 text-primary"></i>
+              <h3 class="text-xl font-bold text-primary">Business & Commercial</h3>
+            </div>
+            <span class="text-primary text-2xl">+</span>
+          </div>
+          <p class="text-gray-600 mt-4 hidden transition-all duration-300">
+            Partnership agreements, company formations & dispute resolution. Protecting your business interests.
+          </p>
+        </div>
+  
+        <!-- Accidents & Negligence -->
+        <div onclick="toggleCard(this)" class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition cursor-pointer">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+              <i data-feather="activity" class="w-10 h-10 text-primary"></i>
+              <h3 class="text-xl font-bold text-primary">Accidents & Negligence</h3>
+            </div>
+            <span class="text-primary text-2xl">+</span>
+          </div>
+          <p class="text-gray-600 mt-4 hidden transition-all duration-300">
+            Traffic litigation, insurance claims & personal injury representation before Greek courts.
+          </p>
+        </div>
+  
+        <!-- Banking Law -->
+        <div onclick="toggleCard(this)" class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition cursor-pointer">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+              <i data-feather="credit-card" class="w-10 h-10 text-primary"></i>
+              <h3 class="text-xl font-bold text-primary">Banking Law</h3>
+            </div>
+            <span class="text-primary text-2xl">+</span>
+          </div>
+          <p class="text-gray-600 mt-4 hidden transition-all duration-300">
+            Expert advice on loans, guarantees & mortgages. Defense against credit over-indebtedness rulings.
+          </p>
+        </div>
+  
+        <!-- Criminal Law -->
+        <div onclick="toggleCard(this)" class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition cursor-pointer">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+              <i data-feather="shield" class="w-10 h-10 text-primary"></i>
+              <h3 class="text-xl font-bold text-primary">Criminal Law</h3>
+            </div>
+            <span class="text-primary text-2xl">+</span>
+          </div>
+          <p class="text-gray-600 mt-4 hidden transition-all duration-300">
+            Serious defence in criminal offences from investigation to trial. Strategic case preparation with experts.
+          </p>
+        </div>
+  
+        <!-- Immigration -->
+        <div onclick="toggleCard(this)" class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition cursor-pointer">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+              <i data-feather="globe" class="w-10 h-10 text-primary"></i>
+              <h3 class="text-xl font-bold text-primary">Immigration</h3>
+            </div>
+            <span class="text-primary text-2xl">+</span>
+          </div>
+          <p class="text-gray-600 mt-4 hidden transition-all duration-300">
+            Applications, appeals & naturalization processes tailored to recent Greek legislation.
+          </p>
+        </div>
+  
+        <!-- Court Decisions -->
+        <div onclick="toggleCard(this)" class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition cursor-pointer">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+              <i data-feather="check-circle" class="w-10 h-10 text-primary"></i>
+              <h3 class="text-xl font-bold text-primary">Court Decisions</h3>
+            </div>
+            <span class="text-primary text-2xl">+</span>
+          </div>
+          <p class="text-gray-600 mt-4 hidden transition-all duration-300">
+            Enforcement & recognition of international judgments in Greek courts.
+          </p>
+        </div>
+  
+        <!-- Translations -->
+        <div onclick="toggleCard(this)" class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition cursor-pointer">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+              <i data-feather="file" class="w-10 h-10 text-primary"></i>
+              <h3 class="text-xl font-bold text-primary">Translations</h3>
+            </div>
+            <span class="text-primary text-2xl">+</span>
+          </div>
+          <p class="text-gray-600 mt-4 hidden transition-all duration-300">
+            Certified translations & notarizations in Greek, English, French & Russian.
+          </p>
+        </div>
+  
       </div>
     </div>
   </section>
-  </section>
+
+
+  
+
 
 
      <!-- Footer -->
