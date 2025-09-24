@@ -92,10 +92,8 @@
   <!-- Services Section -->
   <section class="py-20 bg-secondary">
     <div class="container mx-auto px-4">
-  
-      <!-- Service Cards -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        
+  
         <!-- Real Estate Law -->
         <div onclick="toggleCard(this)" class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition cursor-pointer">
           <div class="flex items-center justify-between">
@@ -103,7 +101,7 @@
               <i data-feather="home" class="w-10 h-10 text-primary"></i>
               <h3 class="text-xl font-bold text-primary">Real Estate Law</h3>
             </div>
-            <span class="text-primary text-2xl">+</span>
+            <span class="toggle-icon text-primary text-2xl">+</span>
           </div>
           <p class="text-gray-600 mt-4 hidden transition-all duration-300">
             Over 500 successful property transactions. Full expertise in registration, title deeds & dispute resolution.
@@ -117,7 +115,7 @@
               <i data-feather="file-text" class="w-10 h-10 text-primary"></i>
               <h3 class="text-xl font-bold text-primary">Lease Contract Law</h3>
             </div>
-            <span class="text-primary text-2xl">+</span>
+            <span class="toggle-icon text-primary text-2xl">+</span>
           </div>
           <p class="text-gray-600 mt-4 hidden transition-all duration-300">
             Drafting, reviewing & litigating lease agreements, arrears & evictions with strong landlord/tenant support.
@@ -131,7 +129,7 @@
               <i data-feather="users" class="w-10 h-10 text-primary"></i>
               <h3 class="text-xl font-bold text-primary">Family Law</h3>
             </div>
-            <span class="text-primary text-2xl">+</span>
+            <span class="toggle-icon text-primary text-2xl">+</span>
           </div>
           <p class="text-gray-600 mt-4 hidden transition-all duration-300">
             Support for divorce, custody, adoption & spousal disputes. Focused on practical and fair solutions.
@@ -145,7 +143,7 @@
               <i data-feather="book" class="w-10 h-10 text-primary"></i>
               <h3 class="text-xl font-bold text-primary">Inheritance Law</h3>
             </div>
-            <span class="text-primary text-2xl">+</span>
+            <span class="toggle-icon text-primary text-2xl">+</span>
           </div>
           <p class="text-gray-600 mt-4 hidden transition-all duration-300">
             Wills, probate, succession and tax compliance. Smooth guidance for international families.
@@ -159,7 +157,7 @@
               <i data-feather="briefcase" class="w-10 h-10 text-primary"></i>
               <h3 class="text-xl font-bold text-primary">Business & Commercial</h3>
             </div>
-            <span class="text-primary text-2xl">+</span>
+            <span class="toggle-icon text-primary text-2xl">+</span>
           </div>
           <p class="text-gray-600 mt-4 hidden transition-all duration-300">
             Partnership agreements, company formations & dispute resolution. Protecting your business interests.
@@ -173,7 +171,7 @@
               <i data-feather="activity" class="w-10 h-10 text-primary"></i>
               <h3 class="text-xl font-bold text-primary">Accidents & Negligence</h3>
             </div>
-            <span class="text-primary text-2xl">+</span>
+            <span class="toggle-icon text-primary text-2xl">+</span>
           </div>
           <p class="text-gray-600 mt-4 hidden transition-all duration-300">
             Traffic litigation, insurance claims & personal injury representation before Greek courts.
@@ -187,7 +185,7 @@
               <i data-feather="credit-card" class="w-10 h-10 text-primary"></i>
               <h3 class="text-xl font-bold text-primary">Banking Law</h3>
             </div>
-            <span class="text-primary text-2xl">+</span>
+            <span class="toggle-icon text-primary text-2xl">+</span>
           </div>
           <p class="text-gray-600 mt-4 hidden transition-all duration-300">
             Expert advice on loans, guarantees & mortgages. Defense against credit over-indebtedness rulings.
@@ -201,7 +199,7 @@
               <i data-feather="shield" class="w-10 h-10 text-primary"></i>
               <h3 class="text-xl font-bold text-primary">Criminal Law</h3>
             </div>
-            <span class="text-primary text-2xl">+</span>
+            <span class="toggle-icon text-primary text-2xl">+</span>
           </div>
           <p class="text-gray-600 mt-4 hidden transition-all duration-300">
             Serious defence in criminal offences from investigation to trial. Strategic case preparation with experts.
@@ -215,7 +213,7 @@
               <i data-feather="globe" class="w-10 h-10 text-primary"></i>
               <h3 class="text-xl font-bold text-primary">Immigration</h3>
             </div>
-            <span class="text-primary text-2xl">+</span>
+            <span class="toggle-icon text-primary text-2xl">+</span>
           </div>
           <p class="text-gray-600 mt-4 hidden transition-all duration-300">
             Applications, appeals & naturalization processes tailored to recent Greek legislation.
@@ -229,7 +227,7 @@
               <i data-feather="check-circle" class="w-10 h-10 text-primary"></i>
               <h3 class="text-xl font-bold text-primary">Court Decisions</h3>
             </div>
-            <span class="text-primary text-2xl">+</span>
+            <span class="toggle-icon text-primary text-2xl">+</span>
           </div>
           <p class="text-gray-600 mt-4 hidden transition-all duration-300">
             Enforcement & recognition of international judgments in Greek courts.
@@ -243,7 +241,7 @@
               <i data-feather="file" class="w-10 h-10 text-primary"></i>
               <h3 class="text-xl font-bold text-primary">Translations</h3>
             </div>
-            <span class="text-primary text-2xl">+</span>
+            <span class="toggle-icon text-primary text-2xl">+</span>
           </div>
           <p class="text-gray-600 mt-4 hidden transition-all duration-300">
             Certified translations & notarizations in Greek, English, French & Russian.
@@ -253,11 +251,27 @@
       </div>
     </div>
   </section>
-
+  
+  <script>
+    function toggleCard(card) {
+      const description = card.querySelector("p");
+      const icon = card.querySelector(".toggle-icon");
+  
+      if (description.classList.contains("hidden")) {
+        description.classList.remove("hidden");
+        icon.textContent = "–"; 
+      } else {
+        description.classList.add("hidden");
+        icon.textContent = "+";
+      }
+    }
+  
+    // Feather icons
+    feather.replace();
+  </script>
 
   
-
-
+  
 
      <!-- Footer -->
      <footer class="bg-gray-900 text-white py-12">
