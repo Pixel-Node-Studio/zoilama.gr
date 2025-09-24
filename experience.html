@@ -295,5 +295,24 @@
         AOS.init();
         feather.replace();
     </script>
+     <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+      
+        let isOpen = false;
+      
+        btn.addEventListener('click', () => {
+          if (isOpen) {
+            menu.style.maxHeight = "0px";
+            isOpen = false;
+          } else {
+            menu.style.maxHeight = menu.scrollHeight + "px";
+            isOpen = true;
+          }
+        });
+      
+        // Feather icons load
+        feather.replace();
+      </script>
 </body>
 </html>
