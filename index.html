@@ -39,31 +39,49 @@
     </style>
 </head>
 <body class="bg-white text-gray-800">
-    <!-- Header -->
-    <header class="bg-white shadow-md">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="flex items-center">
-                <div>
-                    <h1 class="text-3xl font-bold text-primary">Zoi Lama</h1>
-                    <p class="text-base text-gray-600">Property & Law</p>
-                </div>
-            </div>
-            <nav class="hidden md:block">
-                <ul class="flex space-x-6">
-                    <li><a href="index.html" class="text-primary font-semibold hover:text-accent">Home</a></li>
-                    <li><a href="about.html" class="text-gray-600 hover:text-primary">About</a></li>
-                    <li><a href="services.html" class="text-gray-600 hover:text-primary">Services</a></li>
-                    <li><a href="biography.html" class="text-gray-600 hover:text-primary">Biography</a></li>
-                    <li><a href="experience.html" class="text-gray-600 hover:text-primary">Experience</a></li>
-                    <li><a href="testimonials.html" class="text-gray-600 hover:text-primary">Testimonials</a></li>
-                    <li><a href="contact.html" class="text-gray-600 hover:text-primary">Contact</a></li>
-                </ul>
-            </nav>
-            <button class="md:hidden text-primary">
-                <i data-feather="menu"></i>
-            </button>
+   <!-- Header -->
+<header class="bg-white shadow-md relative">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <div>
+          <h1 class="text-3xl font-bold text-primary">Zoi Lama</h1>
+          <p class="text-base text-gray-600">Property & Law</p>
         </div>
-    </header>
+      </div>
+  
+      <!-- Desktop Menu -->
+      <nav class="hidden md:block">
+        <ul class="flex space-x-6">
+          <li><a href="index.html" class="text-gray-600 hover:text-primary">Home</a></li>
+          <li><a href="about.html" class="text-primary font-semibold hover:text-accent">About</a></li>
+          <li><a href="services.html" class="text-gray-600 hover:text-primary">Services</a></li>
+          <li><a href="biography.html" class="text-gray-600 hover:text-primary">Biography</a></li>
+          <li><a href="experience.html" class="text-gray-600 hover:text-primary">Experience</a></li>
+          <li><a href="testimonials.html" class="text-gray-600 hover:text-primary">Testimonials</a></li>
+          <li><a href="contact.html" class="text-gray-600 hover:text-primary">Contact</a></li>
+        </ul>
+      </nav>
+  
+      <!-- Mobile Button -->
+      <button id="menu-btn" class="md:hidden text-primary focus:outline-none z-50 relative">
+        <i data-feather="menu"></i>
+      </button>
+    </div>
+  
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden bg-white shadow-md">
+      <ul class="p-6 space-y-4">
+        <li><a href="index.html" class="block text-gray-600 hover:text-primary">Home</a></li>
+        <li><a href="about.html" class="block text-gray-600 hover:text-primary">About</a></li>
+        <li><a href="services.html" class="block text-gray-600 hover:text-primary">Services</a></li>
+        <li><a href="biography.html" class="block text-gray-600 hover:text-primary">Biography</a></li>
+        <li><a href="experience.html" class="block text-gray-600 hover:text-primary">Experience</a></li>
+        <li><a href="testimonials.html" class="block text-gray-600 hover:text-primary">Testimonials</a></li>
+        <li><a href="contact.html" class="block text-gray-600 hover:text-primary">Contact</a></li>
+      </ul>
+    </div>
+  </header>
 
    <!-- Hero Section -->
 <section class="relative h-[80vh] flex items-center justify-center text-center text-white">
