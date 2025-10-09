@@ -39,27 +39,41 @@
     </style>
 </head>
 <body class="bg-white text-gray-800">
-   <!-- Header -->
+
+
+
+
+  <!-- Header -->
 <header class="bg-white shadow-md relative">
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <!-- Logo -->
-      <div class="flex items-center">
+      
+      <!-- Left side: Logo -->
+      <div class="flex items-center space-x-6">
         <div>
           <h1 class="text-3xl font-bold text-primary">Zoi Lama</h1>
           <p class="text-base text-gray-600">Property & Law</p>
         </div>
+  
+        <!-- Language Switcher (always visible) -->
+        <div class="flex text-sm text-gray-600 font-medium space-x-2 ml-4">
+          <a href="zoilama.gr/index.html" class="text-primary font-semibold underline underline-offset-4">EN</a>
+          <span>|</span>
+          <a href="zoilama.gr/gr/index.html" class="hover:text-primary">GR</a>
+          <span>|</span>
+          <a href="zoilama.gr/fr/index.html" class="hover:text-primary">FR</a>
+        </div>
       </div>
   
       <!-- Desktop Menu -->
-      <nav class="hidden md:block">
+      <nav class="hidden md:flex items-center space-x-6">
         <ul class="flex space-x-6">
-          <li><a href="index.html" class="text-gray-600 hover:text-primary">Home</a></li>
-          <li><a href="about.html" class="text-primary font-semibold hover:text-accent">About</a></li>
-          <li><a href="services.html" class="text-gray-600 hover:text-primary">Services</a></li>
-          <li><a href="biography.html" class="text-gray-600 hover:text-primary">Biography</a></li>
-          <li><a href="experience.html" class="text-gray-600 hover:text-primary">Experience</a></li>
-          <li><a href="testimonials.html" class="text-gray-600 hover:text-primary">Testimonials</a></li>
-          <li><a href="contact.html" class="text-gray-600 hover:text-primary">Contact</a></li>
+          <li><a href="index.html" class="text-primary font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[2px] after:bg-primary">Home</a></li>
+          <li><a href="about.html" class="text-gray-600 hover:text-primary relative group">About<span class="absolute left-0 bottom-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"></span></a></li>
+          <li><a href="services.html" class="text-gray-600 hover:text-primary relative group">Services<span class="absolute left-0 bottom-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"></span></a></li>
+          <li><a href="biography.html" class="text-gray-600 hover:text-primary relative group">Biography<span class="absolute left-0 bottom-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"></span></a></li>
+          <li><a href="experience.html" class="text-gray-600 hover:text-primary relative group">Experience<span class="absolute left-0 bottom-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"></span></a></li>
+          <li><a href="testimonials.html" class="text-gray-600 hover:text-primary relative group">Testimonials<span class="absolute left-0 bottom-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"></span></a></li>
+          <li><a href="contact.html" class="text-gray-600 hover:text-primary relative group">Contact<span class="absolute left-0 bottom-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"></span></a></li>
         </ul>
       </nav>
   
@@ -72,39 +86,27 @@
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden bg-white shadow-md">
       <ul class="p-6 space-y-4">
-        <li><a href="index.html" class="block text-gray-600 hover:text-primary">Home</a></li>
+        <li><a href="index.html" class="block text-primary font-semibold">Home</a></li>
         <li><a href="about.html" class="block text-gray-600 hover:text-primary">About</a></li>
         <li><a href="services.html" class="block text-gray-600 hover:text-primary">Services</a></li>
         <li><a href="biography.html" class="block text-gray-600 hover:text-primary">Biography</a></li>
         <li><a href="experience.html" class="block text-gray-600 hover:text-primary">Experience</a></li>
         <li><a href="testimonials.html" class="block text-gray-600 hover:text-primary">Testimonials</a></li>
         <li><a href="contact.html" class="block text-gray-600 hover:text-primary">Contact</a></li>
+  
+        <!-- Language Switcher (mobile visible too) -->
+        <li class="pt-4 border-t text-sm text-gray-600 flex space-x-3">
+          <a href="zoilama.gr/index.html" class="text-primary font-semibold underline underline-offset-4">EN</a>
+          <span>|</span>
+          <a href="zoilama.gr/gr/index.html" class="hover:text-primary">GR</a>
+          <span>|</span>
+          <a href="zoilama.gr/fr/index.html" class="hover:text-primary">FR</a>
+        </li>
       </ul>
     </div>
   </header>
 
-   <!-- Hero Section -->
-<section class="relative h-[80vh] flex items-center justify-center text-center text-white">
-    <!-- Background image -->
-    <img src="images/law2.jpg" alt="Law Office" class="absolute inset-0 w-full h-full object-cover">
-    <!-- Overlay -->
-    <div class="absolute inset-0 bg-black bg-opacity-60"></div>
-    
-    <!-- Content -->
-    <div class="relative z-10 px-6">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4" data-aos="fade-up">
-        Expert Legal Services in Crete, Greece
-      </h1>
-      <p class="text-xl mb-6 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-        Specializing in Property Law, Family Law, and Inheritance Law for Local and International Clients
-      </p>
-      <a href="contact.html" 
-         class="bg-white text-primary font-bold py-3 px-8 rounded-full hover:bg-secondary transition duration-300"
-         data-aos="fade-up" data-aos-delay="200">
-         Contact Us
-      </a>
-    </div>
-  </section>
+  
 
     <!-- Welcome Section -->
     <section class="py-16 bg-secondary">
