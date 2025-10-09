@@ -258,5 +258,36 @@
       });
     });
   </script>
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.createElement("div");
+  
+    mobileMenu.id = "mobile-menu";
+    mobileMenu.className =
+      "fixed inset-0 bg-white bg-opacity-95 flex flex-col items-center justify-center space-y-6 text-lg text-gray-700 hidden transition-all duration-300";
+    mobileMenu.innerHTML = `
+      <a href="index.html" class="hover:text-primary">Home</a>
+      <a href="about.html" class="hover:text-primary">About</a>
+      <a href="services.html" class="hover:text-primary">Services</a>
+      <a href="biography.html" class="hover:text-primary">Biography</a>
+      <a href="experience.html" class="hover:text-primary">Experience</a>
+      <a href="testimonials.html" class="hover:text-primary">Testimonials</a>
+      <a href="contact.html" class="hover:text-primary">Contact</a>
+      <div class="flex space-x-4 text-sm text-gray-600 pt-6 border-t">
+        <a href="/zoilama.gr/index.html" class="text-primary font-semibold">EN</a>
+        <span>|</span>
+        <a href="/zoilama.gr/gr/index.html" class="hover:text-primary">GR</a>
+        <span>|</span>
+        <a href="/zoilama.gr/fr/index.html" class="hover:text-primary">FR</a>
+      </div>
+    `;
+  
+    document.body.appendChild(mobileMenu);
+  
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
 </body>
 </html>
