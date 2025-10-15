@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Zoi Lama - Avocate en droit immobilier, familial et successoral en Crète, Grèce. Services juridiques pour clients locaux et internationaux.">
+  <meta name="keywords" content="avocat, droit immobilier, droit de la famille, droit des successions, Crète, Grèce, investisseurs étrangers">
+  <title>Zoi Lama - Avocate en Droit Immobilier et de la Famille</title>
+  <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1e3a8a',
+            secondary: '#f3f4f6',
+            accent: '#3b82f6'
+          },
+          fontFamily: {
+            heading: ['Playfair Display', 'serif'],
+            body: ['Open Sans', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Open Sans', sans-serif; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+<!-- Header -->
+<header class="bg-white shadow-md relative">
+  <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    
+    <!-- Logo + Lang -->
+    <div class="flex items-center space-x-6">
+      <div>
+        <h1 class="text-3xl font-bold text-primary">Zoi Lama</h1>
+        <p class="text-base text-gray-600">Avocate en Droit</p>
+      </div>
+      <div class="flex items-center space-x-2 text-sm text-gray-600">
+        <a href="../index.html" class="hover:text-primary">EN</a>
+        <span>|</span>
+        <a href="../gr/index.html" class="hover:text-primary">GR</a>
+        <span>|</span>
+        <a href="./index.html" class="text-primary font-semibold underline underline-offset-4">FR</a>
+      </div>
+    </div>
+
+    <!-- Desktop Menu -->
+    <nav class="hidden md:block">
+      <ul class="flex space-x-6">
+        <li><a href="index.html" class="text-primary font-semibold underline underline-offset-4">Accueil</a></li>
+        <li><a href="about.html" class="text-gray-600 hover:text-primary">À propos</a></li>
+        <li><a href="services.html" class="text-gray-600 hover:text-primary">Services</a></li>
+        <li><a href="biography.html" class="text-gray-600 hover:text-primary">Biographie</a></li>
+        <li><a href="experience.html" class="text-gray-600 hover:text-primary">Expérience</a></li>
+        <li><a href="testimonials.html" class="text-gray-600 hover:text-primary">Témoignages</a></li>
+        <li><a href="contact.html" class="text-gray-600 hover:text-primary">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Button -->
+    <button id="menu-btn" class="md:hidden text-primary focus:outline-none z-50 relative">
+      <i data-feather="menu"></i>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden bg-white shadow-md">
+    <ul class="p-6 space-y-4">
+      <li><a href="index.html" class="block text-primary font-semibold underline underline-offset-4">Accueil</a></li>
+      <li><a href="about.html" class="block text-gray-600 hover:text-primary">À propos</a></li>
+      <li><a href="services.html" class="block text-gray-600 hover:text-primary">Services</a></li>
+      <li><a href="biography.html" class="block text-gray-600 hover:text-primary">Biographie</a></li>
+      <li><a href="experience.html" class="block text-gray-600 hover:text-primary">Expérience</a></li>
+      <li><a href="testimonials.html" class="block text-gray-600 hover:text-primary">Témoignages</a></li>
+      <li><a href="contact.html" class="block text-gray-600 hover:text-primary">Contact</a></li>
+      <li class="pt-4 border-t">
+        <div class="flex space-x-4 text-sm text-gray-600">
+          <a href="../index.html" class="hover:text-primary">EN</a>
+          <span>|</span>
+          <a href="../gr/index.html" class="hover:text-primary">GR</a>
+          <span>|</span>
+          <a href="./index.html" class="text-primary font-semibold">FR</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="relative h-[80vh] flex items-center justify-center text-center text-white">
+  <img src="../images/law2.jpg" alt="Cabinet juridique" class="absolute inset-0 w-full h-full object-cover">
+  <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+
+  <div class="relative z-10 px-6">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4" data-aos="fade-up">
+      Services juridiques experts en Crète, Grèce
+    </h1>
+    <p class="text-xl mb-6 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+      Spécialisée en droit immobilier, droit de la famille et droit des successions pour clients locaux et internationaux.
+    </p>
+    <a href="contact.html" 
+      class="bg-white text-primary font-bold py-3 px-8 rounded-full hover:bg-secondary transition duration-300"
+      data-aos="fade-up" data-aos-delay="200">
+      Contactez-nous
+    </a>
+  </div>
+</section>
+
+<!-- Welcome Section -->
+<section class="py-16 bg-secondary">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2 mb-8 md:mb-0" data-aos="fade-right">
+        <img src="../images/law3.jpg" alt="Cabinet d’avocat" class="rounded-lg shadow-lg">
+      </div>
+      <div class="md:w-1/2 md:pl-12 flex flex-col justify-start" data-aos="fade-left">
+        <h2 class="text-3xl font-bold mb-4 text-primary">Bienvenue chez Zoi Lama Law</h2>
+        <p class="mb-4">
+          Forte de plus de 15 ans d’expérience dans le droit grec, je m’engage à fournir des services juridiques fiables et orientés vers les résultats, tant pour les résidents locaux que pour les clients internationaux.
+        </p>
+        <p>
+          Je suis spécialisée dans les transactions immobilières, le droit de la famille, les successions, ainsi que l’assistance juridique complète aux investisseurs étrangers souhaitant s’implanter en Grèce.
+        </p>
+        <p><b>Ma mission est simple : offrir un accompagnement juridique de confiance avec intégrité, discrétion et un véritable engagement envers votre réussite.</b></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="py-16">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-12 text-primary"><u>Nos principaux services juridiques</u></h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100" data-aos="fade-up">
+        <i data-feather="home" class="w-10 h-10 text-primary mb-4"></i>
+        <h3 class="text-xl font-bold mb-2">Droit immobilier</h3>
+        <p>Assistance complète pour les achats, ventes et litiges immobiliers en Crète et dans toute la Grèce.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100" data-aos="fade-up" data-aos-delay="100">
+        <i data-feather="users" class="w-10 h-10 text-primary mb-4"></i>
+        <h3 class="text-xl font-bold mb-2">Droit de la famille</h3>
+        <p>Conseils et représentation dans les procédures de divorce, garde d’enfants et affaires familiales.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100" data-aos="fade-up" data-aos-delay="200">
+        <i data-feather="book" class="w-10 h-10 text-primary mb-4"></i>
+        <h3 class="text-xl font-bold mb-2">Droit des successions</h3>
+        <p>Assistance professionnelle pour testaments, planification successorale et procédures d’héritage.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100" data-aos="fade-up" data-aos-delay="300">
+        <i data-feather="globe" class="w-10 h-10 text-primary mb-4"></i>
+        <h3 class="text-xl font-bold mb-2">Investisseurs étrangers</h3>
+        <p>Services juridiques spécialisés pour les clients internationaux achetant des biens en Crète.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div>
+        <h3 class="text-xl font-bold mb-4">Zoi Lama Law</h3>
+        <p class="text-gray-400">Fournissant des services juridiques experts en Crète, Grèce depuis 2008.</p>
+      </div>
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Liens rapides</h4>
+        <ul class="space-y-2">
+          <li><a href="index.html" class="text-gray-400 hover:text-white">Accueil</a></li>
+          <li><a href="about.html" class="text-gray-400 hover:text-white">À propos</a></li>
+          <li><a href="services.html" class="text-gray-400 hover:text-white">Services</a></li>
+          <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Domaines d’expertise</h4>
+        <ul class="space-y-2">
+          <li><a href="services.html#property" class="text-gray-400 hover:text-white">Droit immobilier</a></li>
+          <li><a href="services.html#family" class="text-gray-400 hover:text-white">Droit de la famille</a></li>
+          <li><a href="services.html#inheritance" class="text-gray-400 hover:text-white">Droit des successions</a></li>
+          <li><a href="services.html#investors" class="text-gray-400 hover:text-white">Investisseurs étrangers</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Contact</h4>
+        <address class="not-italic text-gray-400">
+          <p>Héraklion, Crète</p>
+          <p>Grèce</p>
+          <p class="mt-2">info@zoilama.com</p>
+          <p>+30 2810 123456</p>
+        </address>
+      </div>
+    </div>
+    <div class="border-t border-gray-800 mt-8 pt-8 text-gray-400 flex flex-col md:flex-row justify-between items-center text-sm">
+      <p class="mb-2 md:mb-0">
+        Conçu et développé par 
+        <a href="https://www.pixelnodestudio.com" target="_blank" class="text-amber-500 hover:underline">
+          Pixel Node Studio
+        </a>
+      </p>
+      <p>&copy; 2025 Zoi Lama - Avocate en Droit. Tous droits réservés.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  AOS.init();
+  feather.replace();
+</script>
+
+<script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  let isOpen = false;
+  btn.addEventListener('click', () => {
+    if (isOpen) {
+      menu.style.maxHeight = "0px";
+      isOpen = false;
+    } else {
+      menu.style.maxHeight = menu.scrollHeight + "px";
+      isOpen = true;
+    }
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const links = document.querySelectorAll("nav a, #mobile-menu a");
+    const currentPage = window.location.pathname.split("/").pop();
+    links.forEach(link => {
+      if (link.getAttribute("href") === currentPage) {
+        link.classList.add("text-primary", "font-semibold", "border-b-2", "border-primary");
+      } else {
+        link.classList.remove("text-primary", "font-semibold", "border-b-2", "border-primary");
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
