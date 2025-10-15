@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ζωή Λάμα - Δικηγόρος Ακινήτων & Δικαίου στην Κρήτη. Εξειδίκευση σε αστικό, οικογενειακό, κληρονομικό δίκαιο και υποθέσεις ξένων επενδυτών.">
+  <meta name="keywords" content="δικηγόρος, δίκαιο ακινήτων, οικογενειακό δίκαιο, κληρονομικό δίκαιο, Κρήτη, Ελλάδα, ξένοι επενδυτές">
+  <title>Υπηρεσίες - Zoi Lama - Property & Law</title>
+  <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1e3a8a',
+            secondary: '#f3f4f6',
+            accent: '#3b82f6'
+          },
+          fontFamily: {
+            heading: ['Playfair Display', 'serif'],
+            body: ['Open Sans', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Open Sans', sans-serif; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
+  </style>
+</head>
+
+<body class="bg-white text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-white shadow-md relative">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <!-- Logo + Language Switcher -->
+      <div class="flex items-center space-x-6">
+        <div>
+          <h1 class="text-3xl font-bold text-primary">Zoi Lama</h1>
+          <p class="text-base text-gray-600">Property & Law</p>
+        </div>
+        <!-- Language Switcher -->
+        <div class="flex items-center space-x-2 text-sm text-gray-600">
+          <a href="/zoilama.gr/index.html" class="hover:text-primary">EN</a>
+          <span>|</span>
+          <a href="/zoilama.gr/gr/services.html" class="text-primary font-semibold underline underline-offset-4">GR</a>
+          <span>|</span>
+          <a href="/zoilama.gr/fr/services.html" class="hover:text-primary">FR</a>
+        </div>
+      </div>
+
+      <!-- Desktop Menu -->
+      <nav class="hidden md:block">
+        <ul class="flex space-x-6">
+          <li><a href="index.html" class="text-gray-600 hover:text-primary">Αρχική</a></li>
+          <li><a href="about.html" class="text-gray-600 hover:text-primary">Σχετικά</a></li>
+          <li><a href="services.html" class="text-primary font-semibold underline underline-offset-4">Υπηρεσίες</a></li>
+          <li><a href="biography.html" class="text-gray-600 hover:text-primary">Βιογραφία</a></li>
+          <li><a href="experience.html" class="text-gray-600 hover:text-primary">Εμπειρία</a></li>
+          <li><a href="testimonials.html" class="text-gray-600 hover:text-primary">Μαρτυρίες</a></li>
+          <li><a href="contact.html" class="text-gray-600 hover:text-primary">Επικοινωνία</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Button -->
+      <button id="menu-btn" class="md:hidden text-primary focus:outline-none z-50 relative">
+        <i data-feather="menu"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden bg-white shadow-md">
+      <ul class="p-6 space-y-4">
+        <li><a href="index.html" class="block text-gray-600 hover:text-primary">Αρχική</a></li>
+        <li><a href="about.html" class="block text-gray-600 hover:text-primary">Σχετικά</a></li>
+        <li><a href="services.html" class="block text-primary font-semibold underline underline-offset-4">Υπηρεσίες</a></li>
+        <li><a href="biography.html" class="block text-gray-600 hover:text-primary">Βιογραφία</a></li>
+        <li><a href="experience.html" class="block text-gray-600 hover:text-primary">Εμπειρία</a></li>
+        <li><a href="testimonials.html" class="block text-gray-600 hover:text-primary">Μαρτυρίες</a></li>
+        <li><a href="contact.html" class="block text-gray-600 hover:text-primary">Επικοινωνία</a></li>
+        <li class="pt-4 border-t">
+          <div class="flex space-x-4 text-sm text-gray-600">
+            <a href="/zoilama.gr/index.html" class="hover:text-primary">EN</a>
+            <span>|</span>
+            <a href="/zoilama.gr/gr/services.html" class="text-primary font-semibold">GR</a>
+            <span>|</span>
+            <a href="/zoilama.gr/fr/services.html" class="hover:text-primary">FR</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+
+<!-- Services Section -->
+<section class="py-20 bg-secondary">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  
+        <!-- Δίκαιο Ακινήτων -->
+        <div onclick="toggleCard(this)" class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition cursor-pointer">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+              <i data-feather="home" class="w-10 h-10 text-primary"></i>
+              <h3 class="text-lg md:text-xl font-bold text-primary">Δίκαιο Ακινήτων</h3>
+            </div>
+            <span class="toggle-icon text-primary text-2xl">+</span>
+          </div>
+          <p class="text-gray-600 mt-4 hidden transition-all duration-300">
+            Πάνω από 500 επιτυχείς μεταβιβάσεις ακινήτων. Εξειδίκευση σε εγγραφές, τίτλους ιδιοκτησίας και επίλυση διαφορών.
+          </p>
+        </div>
+  
+        <!-- Δίκαιο Μισθώσεων -->
+        <div onclick="toggleCard(this)" class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition cursor-pointer">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+              <i data-feather="file-text" class="w-10 h-10 text-primary"></i>
+              <h3 class="text-lg md:text-xl font-bold text-primary">Δίκαιο Μισθώσεων</h3>
+            </div>
+            <span class="toggle-icon text-primary text-2xl">+</span>
+          </div>
+          <p class="text-gray-600 mt-4 hidden transition-all duration-300">
+            Σύνταξη, έλεγχος και δικαστική επίλυση μισθωτηρίων, καθυστερήσεων και εξώσεων με πλήρη υποστήριξη εκμισθωτών και ενοικιαστών.
+          </p>
+        </div>
+  
+        <!-- Οικογενειακό Δίκαιο -->
+        <div onclick="toggleCard(this)" class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition cursor-pointer">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+              <i data-feather="users" class="w-10 h-10 text-primary"></i>
+              <h3 class="text-lg md:text-xl font-bold text-primary">Οικογενειακό Δίκαιο</h3>
+            </div>
+            <span class="toggle-icon text-primary text-2xl">+</span>
+          </div>
+          <p class="text-gray-600 mt-4 hidden transition-all duration-300">
+            Νομική υποστήριξη σε διαζύγια, επιμέλειες, υιοθεσίες και διατροφές. Εστίαση σε δίκαιες και πρακτικές λύσεις.
+          </p>
+        </div>
+  
+        <!-- Κληρονομικό Δίκαιο -->
+        <div onclick="toggleCard(this)" class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition cursor-pointer">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+              <i data-feather="book" class="w-10 h-10 text-primary"></i>
+              <h3 class="text-lg md:text-xl font-bold text-primary">Κληρονομικό Δίκαιο</h3>
+            </div>
+            <span class="toggle-icon text-primary text-2xl">+</span>
+          </div>
+          <p class="text-gray-600 mt-4 hidden transition-all duration-300">
+            Διαθήκες, αποδοχές, φορολογικά ζητήματα και καθοδήγηση για ελληνικές και διεθνείς υποθέσεις διαδοχής.
+          </p>
+        </div>
+  
+        <!-- Εμπορικό & Εταιρικό Δίκαιο -->
+        <div onclick="toggleCard(this)" class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition cursor-pointer">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+              <i data-feather="briefcase" class="w-10 h-10 text-primary"></i>
+              <h3 class="text-lg md:text-xl font-bold text-primary">Εμπορικό & Εταιρικό Δίκαιο</h3>
+            </div>
+            <span class="toggle-icon text-primary text-2xl">+</span>
+          </div>
+          <p class="text-gray-600 mt-4 hidden transition-all duration-300">
+            Εταιρικές συστάσεις, εμπορικές συμφωνίες και νομική υποστήριξη επιχειρήσεων σε συμβάσεις και διαφορές.
+          </p>
+        </div>
+  
+        <!-- Ατυχήματα & Αμέλεια -->
+        <div onclick="toggleCard(this)" class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition cursor-pointer">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+              <i data-feather="activity" class="w-10 h-10 text-primary"></i>
+              <h3 class="text-lg md:text-xl font-bold text-primary">Ατυχήματα & Αμέλεια</h3>
+            </div>
+            <span class="toggle-icon text-primary text-2xl">+</span>
+          </div>
+          <p class="text-gray-600 mt-4 hidden transition-all duration-300">
+            Διεκδικήσεις αποζημιώσεων, τροχαία ατυχήματα και υποθέσεις σωματικών βλαβών ενώπιον ελληνικών δικαστηρίων.
+          </p>
+        </div>
+  
+        <!-- Τραπεζικό Δίκαιο -->
+        <div onclick="toggleCard(this)" class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition cursor-pointer">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+              <i data-feather="credit-card" class="w-10 h-10 text-primary"></i>
+              <h3 class="text-lg md:text-xl font-bold text-primary">Τραπεζικό Δίκαιο</h3>
+            </div>
+            <span class="toggle-icon text-primary text-2xl">+</span>
+          </div>
+          <p class="text-gray-600 mt-4 hidden transition-all duration-300">
+            Νομική καθοδήγηση για δάνεια, εγγυήσεις και υποθήκες. Υπεράσπιση σε υποθέσεις υπερχρεωμένων δανειοληπτών.
+          </p>
+        </div>
+  
+        <!-- Ποινικό Δίκαιο -->
+        <div onclick="toggleCard(this)" class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition cursor-pointer">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+              <i data-feather="shield" class="w-10 h-10 text-primary"></i>
+              <h3 class="text-lg md:text-xl font-bold text-primary">Ποινικό Δίκαιο</h3>
+            </div>
+            <span class="toggle-icon text-primary text-2xl">+</span>
+          </div>
+          <p class="text-gray-600 mt-4 hidden transition-all duration-300">
+            Υπεράσπιση σε ποινικές υποθέσεις από το στάδιο της προανάκρισης έως τη δίκη. Στρατηγική προετοιμασία με ειδικούς συνεργάτες.
+          </p>
+        </div>
+  
+        <!-- Μετανάστευση -->
+        <div onclick="toggleCard(this)" class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition cursor-pointer">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+              <i data-feather="globe" class="w-10 h-10 text-primary"></i>
+              <h3 class="text-lg md:text-xl font-bold text-primary">Μετανάστευση</h3>
+            </div>
+            <span class="toggle-icon text-primary text-2xl">+</span>
+          </div>
+          <p class="text-gray-600 mt-4 hidden transition-all duration-300">
+            Άδειες παραμονής, προσφυγές και διαδικασίες πολιτογράφησης σύμφωνα με την ισχύουσα ελληνική νομοθεσία.
+          </p>
+        </div>
+  
+        <!-- Δικαστικές Αποφάσεις -->
+        <div onclick="toggleCard(this)" class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition cursor-pointer">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+              <i data-feather="check-circle" class="w-10 h-10 text-primary"></i>
+              <h3 class="text-lg md:text-xl font-bold text-primary">Δικαστικές Αποφάσεις</h3>
+            </div>
+            <span class="toggle-icon text-primary text-2xl">+</span>
+          </div>
+          <p class="text-gray-600 mt-4 hidden transition-all duration-300">
+            Αναγνώριση και εκτέλεση διεθνών αποφάσεων στα ελληνικά δικαστήρια.
+          </p>
+        </div>
+  
+        <!-- Μεταφράσεις -->
+        <div onclick="toggleCard(this)" class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition cursor-pointer">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+              <i data-feather="file" class="w-10 h-10 text-primary"></i>
+              <h3 class="text-lg md:text-xl font-bold text-primary">Μεταφράσεις</h3>
+            </div>
+            <span class="toggle-icon text-primary text-2xl">+</span>
+          </div>
+          <p class="text-gray-600 mt-4 hidden transition-all duration-300">
+            Επικυρωμένες μεταφράσεις και συμβολαιογραφικές πράξεις στα Ελληνικά, Αγγλικά, Γαλλικά και Ρωσικά.
+          </p>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4">Zoi Lama Law</h3>
+          <p class="text-gray-400">Παροχή εξειδικευμένων νομικών υπηρεσιών στην Κρήτη από το 2008.</p>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Γρήγορη Πρόσβαση</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-400 hover:text-white">Αρχική</a></li>
+            <li><a href="about.html" class="text-gray-400 hover:text-white">Σχετικά</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-white">Υπηρεσίες</a></li>
+            <li><a href="contact.html" class="text-gray-400 hover:text-white">Επικοινωνία</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Υπηρεσίες</h4>
+          <ul class="space-y-2">
+            <li><a href="services.html#property" class="text-gray-400 hover:text-white">Δίκαιο Ακινήτων</a></li>
+            <li><a href="services.html#family" class="text-gray-400 hover:text-white">Οικογενειακό Δίκαιο</a></li>
+            <li><a href="services.html#inheritance" class="text-gray-400 hover:text-white">Κληρονομικό Δίκαιο</a></li>
+            <li><a href="services.html#investors" class="text-gray-400 hover:text-white">Ξένοι Επενδυτές</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Επικοινωνία</h4>
+          <address class="not-italic text-gray-400">
+            <p>Ηράκλειο, Κρήτη</p>
+            <p>Ελλάδα</p>
+            <p class="mt-2">info@zoilama.com</p>
+            <p>+30 2810 123456</p>
+          </address>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-8 text-gray-400 flex flex-col md:flex-row justify-between items-center text-sm">
+        <p class="mb-2 md:mb-0">
+          Σχεδιασμένο & Αναπτυγμένο από
+          <a href="https://www.pixelnodestudio.com" target="_blank" class="text-amber-500 hover:underline">Pixel Node Studio</a>
+        </p>
+        <p>&copy; 2025 Zoi Lama - Property & Law. Όλα τα δικαιώματα διατηρούνται.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    AOS.init();
+    feather.replace();
+
+    function toggleCard(card) {
+      const description = card.querySelector("p");
+      const icon = card.querySelector(".toggle-icon");
+      const isHidden = description.classList.contains("hidden");
+      description.classList.toggle("hidden", !isHidden);
+      icon.textContent = isHidden ? "–" : "+";
+    }
+
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    let isOpen = false;
+    btn.addEventListener('click', () => {
+      menu.style.maxHeight = isOpen ? "0px" : menu.scrollHeight + "px";
+      isOpen = !isOpen;
+    });
+  </script>
+</body>
+</html>
