@@ -39,14 +39,22 @@
     </style>
 </head>
 <body class="bg-white text-gray-800">
-   <!-- Header -->
+  <!-- Header -->
 <header class="bg-white shadow-md relative">
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <!-- Logo -->
-      <div class="flex items-center">
+      <!-- Logo + Language Switcher -->
+      <div class="flex items-center space-x-6">
         <div>
           <h1 class="text-3xl font-bold text-primary">Zoi Lama</h1>
           <p class="text-base text-gray-600">Property & Law</p>
+        </div>
+        <!-- Language Switcher -->
+        <div class="flex items-center space-x-2 text-sm text-gray-600">
+          <a href="/zoilama.gr/index.html" class="text-primary font-semibold underline underline-offset-4">EN</a>
+          <span>|</span>
+          <a href="/zoilama.gr/gr/experience.html" class="hover:text-primary">GR</a>
+          <span>|</span>
+          <a href="/zoilama.gr/fr/experience.html" class="hover:text-primary">FR</a>
         </div>
       </div>
   
@@ -54,10 +62,10 @@
       <nav class="hidden md:block">
         <ul class="flex space-x-6">
           <li><a href="index.html" class="text-gray-600 hover:text-primary">Home</a></li>
-          <li><a href="about.html" class="text-primary font-semibold hover:text-accent">About</a></li>
+          <li><a href="about.html" class="text-gray-600 hover:text-primary">About</a></li>
           <li><a href="services.html" class="text-gray-600 hover:text-primary">Services</a></li>
           <li><a href="biography.html" class="text-gray-600 hover:text-primary">Biography</a></li>
-          <li><a href="experience.html" class="text-gray-600 hover:text-primary">Experience</a></li>
+          <li><a href="experience.html" class="text-primary font-semibold underline underline-offset-4">Experience</a></li>
           <li><a href="testimonials.html" class="text-gray-600 hover:text-primary">Testimonials</a></li>
           <li><a href="contact.html" class="text-gray-600 hover:text-primary">Contact</a></li>
         </ul>
@@ -76,9 +84,20 @@
         <li><a href="about.html" class="block text-gray-600 hover:text-primary">About</a></li>
         <li><a href="services.html" class="block text-gray-600 hover:text-primary">Services</a></li>
         <li><a href="biography.html" class="block text-gray-600 hover:text-primary">Biography</a></li>
-        <li><a href="experience.html" class="block text-gray-600 hover:text-primary">Experience</a></li>
+        <li><a href="experience.html" class="block text-primary font-semibold underline underline-offset-4">Experience</a></li>
         <li><a href="testimonials.html" class="block text-gray-600 hover:text-primary">Testimonials</a></li>
         <li><a href="contact.html" class="block text-gray-600 hover:text-primary">Contact</a></li>
+  
+        <!-- Language Switcher (Mobile) -->
+        <li class="pt-4 border-t">
+          <div class="flex space-x-4 text-sm text-gray-600">
+            <a href="/zoilama.gr/index.html" class="text-primary font-semibold">EN</a>
+            <span>|</span>
+            <a href="/zoilama.gr/gr/experience.html" class="hover:text-primary">GR</a>
+            <span>|</span>
+            <a href="/zoilama.gr/fr/experience.html" class="hover:text-primary">FR</a>
+          </div>
+        </li>
       </ul>
     </div>
   </header>
