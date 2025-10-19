@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Βιογραφικό της Ζωής Λάμα, δικηγόρου στην Κρήτη με εξειδίκευση στο αστικό, οικογενειακό και κληρονομικό δίκαιο.">
+  <meta name="keywords" content="δικηγόρος, Ζωή Λάμα, βιογραφικό, Κρήτη, ακίνητα, οικογενειακό δίκαιο, κληρονομικό δίκαιο">
+  <title>Βιογραφικό - Ζωή Λάμα - Δικηγόρος Ακινήτων & Δικαίου</title>
+  <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1e3a8a',
+            secondary: '#f3f4f6',
+            accent: '#3b82f6'
+          },
+          fontFamily: {
+            heading: ['Playfair Display', 'serif'],
+            body: ['Open Sans', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Playfair Display', serif;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-white shadow-md relative">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <!-- Logo + Language Switcher -->
+      <div class="flex items-center space-x-6">
+        <div>
+          <h1 class="text-3xl font-bold text-primary">Zoi Lama</h1>
+          <p class="text-base text-gray-600">Ακίνητα & Δίκαιο</p>
+        </div>
+        <!-- Language Switcher -->
+        <div class="flex items-center space-x-2 text-sm text-gray-600">
+          <a href="/zoilama.gr/index.html" class="hover:text-primary">EN</a>
+          <span>|</span>
+          <a href="/zoilama.gr/gr/biography.html" class="text-primary font-semibold underline underline-offset-4">GR</a>
+          <span>|</span>
+          <a href="/zoilama.gr/fr/biography.html" class="hover:text-primary">FR</a>
+        </div>
+      </div>
+
+      <!-- Desktop Menu -->
+      <nav class="hidden md:block">
+        <ul class="flex space-x-6">
+          <li><a href="index.html" class="text-gray-600 hover:text-primary">Αρχική</a></li>
+          <li><a href="about.html" class="text-gray-600 hover:text-primary">Σχετικά</a></li>
+          <li><a href="services.html" class="text-gray-600 hover:text-primary">Υπηρεσίες</a></li>
+          <li><a href="biography.html" class="text-primary font-semibold underline underline-offset-4">Βιογραφικό</a></li>
+          <li><a href="experience.html" class="text-gray-600 hover:text-primary">Εμπειρία</a></li>
+          <li><a href="testimonials.html" class="text-gray-600 hover:text-primary">Μαρτυρίες</a></li>
+          <li><a href="contact.html" class="text-gray-600 hover:text-primary">Επικοινωνία</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Button -->
+      <button id="menu-btn" class="md:hidden text-primary focus:outline-none z-50 relative">
+        <i data-feather="menu"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden bg-white shadow-md">
+      <ul class="p-6 space-y-4">
+        <li><a href="index.html" class="block text-gray-600 hover:text-primary">Αρχική</a></li>
+        <li><a href="about.html" class="block text-gray-600 hover:text-primary">Σχετικά</a></li>
+        <li><a href="services.html" class="block text-gray-600 hover:text-primary">Υπηρεσίες</a></li>
+        <li><a href="biography.html" class="block text-primary font-semibold underline underline-offset-4">Βιογραφικό</a></li>
+        <li><a href="experience.html" class="block text-gray-600 hover:text-primary">Εμπειρία</a></li>
+        <li><a href="testimonials.html" class="block text-gray-600 hover:text-primary">Μαρτυρίες</a></li>
+        <li><a href="contact.html" class="block text-gray-600 hover:text-primary">Επικοινωνία</a></li>
+        <li class="pt-4 border-t">
+          <div class="flex space-x-4 text-sm text-gray-600">
+            <a href="/zoilama.gr/index.html" class="hover:text-primary">EN</a>
+            <span>|</span>
+            <a href="/zoilama.gr/gr/biography.html" class="text-primary font-semibold">GR</a>
+            <span>|</span>
+            <a href="/zoilama.gr/fr/biography.html" class="hover:text-primary">FR</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Biography Hero -->
+  <section class="bg-gradient-to-r from-primary to-blue-800 text-white py-16">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-4xl font-bold mb-4">Βιογραφικό</h1>
+      <p class="text-xl max-w-3xl mx-auto">Γνωρίστε τη σταδιοδρομία και την επαγγελματική πορεία της Ζωής Λάμα</p>
+    </div>
+  </section>
+
+  <!-- Biography Content -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center mb-16">
+        <div class="md:w-1/3 mb-8 md:mb-0" data-aos="fade-right">
+          <img src="images/law5.png" alt="Zoi Lama" class="rounded-lg shadow-lg">
+        </div>
+        <div class="md:w-2/3 md:pl-12" data-aos="fade-left">
+          <h2 class="text-3xl font-bold mb-4 text-primary">Ζωή Λάμα</h2>
+          <p class="mb-4">Η Ζωή Λάμα είναι δικηγόρος με άδεια ασκήσεως επαγγέλματος στην Ελλάδα και πάνω από 15 χρόνια εμπειρίας. Εξειδικεύεται στο δίκαιο ακινήτων, στο οικογενειακό και στο κληρονομικό δίκαιο, παρέχοντας παράλληλα νομική υποστήριξη σε ξένους επενδυτές που επιθυμούν να αποκτήσουν ακίνητη περιουσία στην Κρήτη.</p>
+          <p class="mb-4">Εδρεύοντας στο Ηράκλειο, εξυπηρετεί τόσο κατοίκους Ελλάδας όσο και διεθνείς πελάτες, προσφέροντας εξατομικευμένες νομικές λύσεις ανάλογα με τις ανάγκες κάθε υπόθεσης.</p>
+          <p>Με επαγγελματισμό και ακεραιότητα, έχει καθιερωθεί για τη σαφή, αποτελεσματική και προσιτή νομική της καθοδήγηση σε σύνθετες υποθέσεις.</p>
+        </div>
+      </div>
+
+      <div class="mb-16" data-aos="fade-up">
+        <h2 class="text-3xl font-bold mb-8 text-center text-primary">Σπουδές & Προσόντα</h2>
+        <div class="bg-secondary rounded-lg p-8">
+          <div class="flex flex-col md:flex-row mb-8">
+            <div class="md:w-1/4 mb-4 md:mb-0">
+              <h3 class="text-xl font-bold text-primary">Πανεπιστήμιο Αθηνών</h3>
+              <p class="text-gray-600">2000-2005</p>
+            </div>
+            <div class="md:w-3/4">
+              <h4 class="text-lg font-semibold mb-2">Πτυχίο Νομικής</h4>
+              <p>Απόφοιτος της Νομικής Σχολής του Εθνικού και Καποδιστριακού Πανεπιστημίου Αθηνών με εξειδίκευση στο Αστικό και Διεθνές Δίκαιο.</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col md:flex-row mb-8">
+            <div class="md:w-1/4 mb-4 md:mb-0">
+              <h3 class="text-xl font-bold text-primary">Εγγραφή στο Δικηγορικό Σύλλογο</h3>
+              <p class="text-gray-600">2008</p>
+            </div>
+            <div class="md:w-3/4">
+              <h4 class="text-lg font-semibold mb-2">Δικηγορικός Σύλλογος Αθηνών</h4>
+              <p>Εγγεγραμμένη στο Δικηγορικό Σύλλογο Αθηνών μετά την επιτυχή ολοκλήρωση της άσκησης και των απαιτούμενων εξετάσεων.</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col md:flex-row">
+            <div class="md:w-1/4 mb-4 md:mb-0">
+              <h3 class="text-xl font-bold text-primary">Δια Βίου Μάθηση</h3>
+              <p class="text-gray-600">Σε εξέλιξη</p>
+            </div>
+            <div class="md:w-3/4">
+              <h4 class="text-lg font-semibold mb-2">Επαγγελματική Επιμόρφωση</h4>
+              <p>Παρακολουθεί τακτικά σεμινάρια και ημερίδες σχετικά με το δίκαιο ακινήτων, το οικογενειακό και το διεθνές δίκαιο. Μέλος του Δικηγορικού Συλλόγου Ελλάδας και της Διεθνούς Ένωσης Δικηγόρων.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-16" data-aos="fade-up">
+        <h2 class="text-3xl font-bold mb-8 text-center text-primary">Επαγγελματική Εξειδίκευση</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+            <div class="text-primary mb-4">
+              <i data-feather="home" class="w-10 h-10"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Δίκαιο Ακινήτων</h3>
+            <p>Εξειδίκευση σε θέματα αγοραπωλησιών, διαφορών ιδιοκτησίας και νομικής κατοχύρωσης ακινήτων σε Έλληνες και ξένους πελάτες.</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+            <div class="text-primary mb-4">
+              <i data-feather="users" class="w-10 h-10"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Οικογενειακό Δίκαιο</h3>
+            <p>Ανάληψη υποθέσεων διαζυγίων, επιμέλειας, διατροφών και άλλων οικογενειακών διαφορών με διακριτικότητα και αποτελεσματικότητα.</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+            <div class="text-primary mb-4">
+              <i data-feather="book" class="w-10 h-10"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Κληρονομικό Δίκαιο</h3>
+            <p>Σύνταξη διαθηκών, διαδικασίες αποδοχής κληρονομιάς και επίλυση διαφορών μεταξύ κληρονόμων, τόσο εντός όσο και εκτός Ελλάδας.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-primary text-white rounded-lg p-12" data-aos="fade-up">
+        <h2 class="text-3xl font-bold mb-10 text-center">Γλωσσικές Δεξιότητες</h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+          <div class="bg-white text-primary rounded-lg p-6 shadow-md">
+            <i data-feather="globe" class="w-10 h-10 mx-auto mb-4"></i>
+            <h3 class="text-xl font-bold">Ελληνικά (Μητρική)</h3>
+          </div>
+          <div class="bg-white text-primary rounded-lg p-6 shadow-md">
+            <i data-feather="globe" class="w-10 h-10 mx-auto mb-4"></i>
+            <h3 class="text-xl font-bold">Αγγλικά (Άπταιστα)</h3>
+          </div>
+          <div class="bg-white text-primary rounded-lg p-6 shadow-md">
+            <i data-feather="globe" class="w-10 h-10 mx-auto mb-4"></i>
+            <h3 class="text-xl font-bold">Γερμανικά (Άπταιστα)</h3>
+          </div>
+          <div class="bg-white text-primary rounded-lg p-6 shadow-md">
+            <i data-feather="globe" class="w-10 h-10 mx-auto mb-4"></i>
+            <h3 class="text-xl font-bold">Γαλλικά (Άπταιστα)</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <!-- Λογότυπο / Περιγραφή -->
+        <div>
+          <h3 class="text-xl font-bold mb-4">Zoi Lama Δικηγόρος</h3>
+          <p class="text-gray-400">Παροχή εξειδικευμένων νομικών υπηρεσιών στην Κρήτη από το 2008.</p>
+        </div>
+  
+        <!-- Γρήγορη Πρόσβαση -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Γρήγορη Πρόσβαση</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-400 hover:text-white">Αρχική</a></li>
+            <li><a href="about.html" class="text-gray-400 hover:text-white">Σχετικά</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-white">Υπηρεσίες</a></li>
+            <li><a href="contact.html" class="text-gray-400 hover:text-white">Επικοινωνία</a></li>
+          </ul>
+        </div>
+  
+        <!-- Υπηρεσίες -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Υπηρεσίες</h4>
+          <ul class="space-y-2">
+            <li><a href="services.html#property" class="text-gray-400 hover:text-white">Δίκαιο Ακινήτων</a></li>
+            <li><a href="services.html#family" class="text-gray-400 hover:text-white">Οικογενειακό Δίκαιο</a></li>
+            <li><a href="services.html#inheritance" class="text-gray-400 hover:text-white">Κληρονομικό Δίκαιο</a></li>
+            <li><a href="services.html#investors" class="text-gray-400 hover:text-white">Ξένοι Επενδυτές</a></li>
+          </ul>
+        </div>
+  
+        <!-- Επικοινωνία -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Επικοινωνία</h4>
+          <address class="not-italic text-gray-400">
+            <p>Ηράκλειο, Κρήτη</p>
+            <p>Ελλάδα</p>
+            <p class="mt-2">info@zoilama.com</p>
+            <p>+30 2810 123456</p>
+          </address>
+        </div>
+  
+      </div>
+  
+      <!-- Κάτω γραμμή -->
+      <div class="border-t border-gray-800 mt-8 pt-8 text-gray-400 flex flex-col md:flex-row justify-between items-center text-sm">
+        <p class="mb-2 md:mb-0">
+          Σχεδίαση & Ανάπτυξη από 
+          <a href="https://www.pixelnodestudio.com" target="_blank" class="text-amber-500 hover:underline">
+            Pixel Node Studio
+          </a>
+        </p>
+        <p>&copy; 2025 Zoi Lama - Ακίνητα & Δίκαιο. Όλα τα δικαιώματα διατηρούνται.</p>
+      </div>
+    </div>
+  </footer>
+
+
+<script>
+    AOS.init();
+    feather.replace();
+</script>
+ <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+  
+    let isOpen = false;
+  
+    btn.addEventListener('click', () => {
+      if (isOpen) {
+        menu.style.maxHeight = "0px";
+        isOpen = false;
+      } else {
+        menu.style.maxHeight = menu.scrollHeight + "px";
+        isOpen = true;
+      }
+    });
+  
+    // Feather icons load
+    feather.replace();
+  </script>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const links = document.querySelectorAll("nav a, #mobile-menu a");
+      const currentPage = window.location.pathname.split("/").pop();
+  
+      links.forEach(link => {
+        if (link.getAttribute("href") === currentPage) {
+          link.classList.add("text-primary", "font-semibold", "border-b-2", "border-primary");
+        } else {
+          link.classList.remove("text-primary", "font-semibold", "border-b-2", "border-primary");
+        }
+      });
+    });
+  </script>
+</body>
+</html>
